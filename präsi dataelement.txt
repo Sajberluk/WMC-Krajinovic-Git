@@ -1,0 +1,15 @@
+👉 Das <datalist>-Element in HTML5
+
+Das <datalist>-Element erlaubt es, Eingabefeldern Vorschläge zu geben, ähnlich wie eine Autovervollständigung. Nutzer können entweder einen Vorschlag auswählen oder selbst etwas Neues eingeben. Das macht Formulare viel benutzerfreundlicher und wird oft übersehen, obwohl es sehr praktisch ist.
+
+<label for="browser">Wähle einen Browser:</label>
+<input list="browsers" id="browser" name="browser">
+<datalist id="browsers">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Safari">
+  <option value="Edge">
+</datalist>
+
+
+HTML5 bietet mit dem <datalist>-Element die Möglichkeit, Eingabefelder mit Vorschlägen auszustatten, ähnlich wie bei einer Autovervollständigung. Nutzer können aus den Vorschlägen wählen oder selbst etwas eintippen. Das macht Formulare komfortabler und wird oft unterschätzt.
