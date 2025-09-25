@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Beans Café</title>
+  <link rel="stylesheet" href="css/theme-light.css" id="theme-link">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    function switchTheme() {
+      const link = document.getElementById("theme-link");
+      link.href = link.href.includes("theme-light.css") 
+        ? "css/theme-accent.css" 
+        : "css/theme-light.css";
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">☕ Urban Beans</div>
+    <nav>
+      <ul>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#menu">Speisekarte</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button onclick="switchTheme()" class="theme-btn">Theme</button>
+  </header>
+
+  <main>
+    <section id="about" class="hero">
+      <div class="hero-text">
+        <h1>Willkommen bei Urban Beans</h1>
+        <p>Genieße frisch gebrühten Kaffee, kreative Drinks und hausgemachte Snacks in modernem Ambiente.</p>
+      </div>
+      <img src="images/cafe.jpg" alt="Gemütliches Café-Interieur" class="hero-img">
+    </section>
+
+    <section id="menu" class="menu">
+      <h2>Unsere Specials</h2>
+      <div class="menu-grid">
+        <div class="card"><h3>Espresso</h3><p>Klein, stark, intensiv.</p><span>2,20 €</span></div>
+        <div class="card"><h3>Cappuccino</h3><p>Cremiger Milchschaum.</p><span>3,20 €</span></div>
+        <div class="card"><h3>Latte Macchiato</h3><p>Sanfte Milch trifft Espresso.</p><span>3,80 €</span></div>
+        <div class="card"><h3>Cold Brew</h3><p>Erfrischend kalt aufgebrüht.</p><span>3,50 €</span></div>
+        <div class="card"><h3>Matcha Latte</h3><p>Grüntee mit samtiger Milch.</p><span>4,20 €</span></div>
+        <div class="card"><h3>Chai Latte</h3><p>Indische Gewürze im Glas.</p><span>3,80 €</span></div>
+      </div>
+    </section>
+
+    <section id="team" class="team">
+      <h2>Unser Team</h2>
+      <div class="team-card">
+        <img src="images/team.jpg" alt="Das Urban Beans Team">
+        <p>Wir sind ein kreatives Team von Baristas, die Kaffee lieben und jedes Getränk mit Leidenschaft zubereiten.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Reservierung</h2>
+      <form>
+        <input type="text" placeholder="Dein Name" required>
+        <input type="date" required>
+        <input type="number" placeholder="Personen" min="1" max="20" required>
+        <button type="submit">Jetzt reservieren</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Urban Beans Café – Mit Liebe geröstet</p>
+  </footer>
+</body>
+</html>
