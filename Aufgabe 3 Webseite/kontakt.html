@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Film & Serien – Kontakt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">F&S Hub</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="serien.html">Serien</a>
+      <a class="active" href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Kontakt / Feedback</h1>
+  <p>Hier kannst du eine Film- oder Serienempfehlung schicken (Demo-Formular).</p>
+
+  <form action="#" method="post">
+    <label for="name">Name *</label>
+    <input id="name" name="name" type="text" required placeholder="Max Mustermann" />
+
+    <label for="email">E-Mail *</label>
+    <input id="email" name="email" type="email" required placeholder="max@mail.com" />
+
+    <label for="typ">Kategorie</label>
+    <select id="typ" name="typ">
+      <option>Film</option>
+      <option>Serie</option>
+    </select>
+
+    <label for="titel">Titel *</label>
+    <input id="titel" name="titel" type="text" required placeholder="z. B. Neon City" />
+
+    <label for="msg">Warum empfiehlst du das?</label>
+    <textarea id="msg" name="msg" rows="5" placeholder="Kurzbeschreibung..."></textarea>
+
+    <button type="submit">Absenden</button>
+  </form>
+</main>
+
+<footer>
+  © F&S Hub – Aufgabe 3
+</footer>
+
+</body>
+</html>

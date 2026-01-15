@@ -1,0 +1,205 @@
+/* Fix: sorgt dafür, dass Padding + Border nicht über 100% Breite hinausgehen */
+* {
+  box-sizing: border-box;
+}
+
+/* Grund-Style */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f6f6;
+  color: #222;
+  line-height: 1.5;
+
+  /* optionales Sicherheitsnetz gegen horizontales Scrollen */
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Navbar (Flexbox) */
+header {
+  position: sticky;     /* bleibt oben */
+  top: 0;
+  background: rgba(255, 255, 255, 0.9); /* leicht durchsichtig */
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+/* Pseudoselektor Hover */
+.nav-links a:hover {
+  background: #e9e9e9;
+}
+
+/* Aktiver Link */
+.nav-links a.active {
+  background: #222;
+  color: white;
+}
+
+/* Überschriften */
+h1, h2 {
+  margin-top: 0;
+}
+
+/* Artikel-Karten */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.card .content {
+  padding: 12px;
+}
+
+/* Liste */
+ul {
+  margin: 8px 0 0;
+}
+
+/* Tabelle */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+/* Zebra-Streifen (Pseudoselektor) */
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Video */
+.video {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+/* Formular */
+form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+
+  /* Extra-sicher (auch wenn * { box-sizing } schon drin ist) */
+  box-sizing: border-box;
+}
+
+/* Pseudoselektor Focus (wenn man reinklickt) */
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #222;
+  border-color: #222;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 18px;
+  text-align: center;
+  color: #666;
+}
+
+/* Responsive (Media Query) */
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr; /* am Handy eine Spalte */
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}
