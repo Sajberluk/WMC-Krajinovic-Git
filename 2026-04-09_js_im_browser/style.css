@@ -1,0 +1,84 @@
+:root {
+    --primary: #2563eb;
+    --bg-header: #f8fafc;
+    --border: #e2e8f0;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 1000px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+caption {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.5rem;
+    text-align: left;
+    color: var(--text-main);
+}
+
+th, td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: var(--bg-header);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+th:hover {
+    background-color: #f1f5f9;
+}
+
+th::after {
+    content: " ↕";
+    margin-left: 8px;
+    opacity: 0.2;
+    transition: opacity 0.2s;
+}
+
+th.asc::after {
+    content: " ↑";
+    opacity: 1;
+    color: var(--primary);
+}
+
+th.desc::after {
+    content: " ↓";
+    opacity: 1;
+    color: var(--primary);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f8fafc;
+}
