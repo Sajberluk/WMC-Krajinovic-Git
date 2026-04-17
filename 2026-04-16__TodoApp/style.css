@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #5e5c5c;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+:root {
+  --page-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --panel-bg: rgba(255, 255, 255, 0.9);
+  --panel-border: rgba(255, 255, 255, 0.3);
+  --headline: #1a202c;
+  --text: #2d3748;
+  --muted: #718096;
+  --accent: #4a90e2;
+  --accent-dark: #357abd;
+  --surface: #edf2f7;
+  --surface-strong: #ffffff;
+  --done-bg: #f7fafc;
+  --danger: #e53e3e;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05);
+  
+  --p1-color: #f56565;
+  --p2-color: #ed8936;
+  --p3-color: #ecc94b;
+  --p4-color: #48bb78;
+  --p5-color: #4299e1;
+}
+
+html {
+  min-height: 100%;
+  background: var(--page-bg);
+}
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 20px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  z-index: -1;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: var(--headline);
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+h1::after {
+  content: "Organisiere deinen Tag klar und ohne Ablenkung.";
+  display: block;
+  margin-top: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+h2 {
+  margin-top: 6px;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  background: var(--surface-strong);
+  padding: 8px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#todo-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 16px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#todo-priority {
+  border: 1px solid var(--surface);
+  border-radius: 12px;
+  padding: 0 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+#todo-add {
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+#todo-add:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 16px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#todo-add {
+  min-width: 96px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  box-shadow: 0 10px 24px rgba(17, 24, 32, 0.34);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(110, 138, 166, 0.14);
+  display: grid;
+  gap: 8px;
+}
+
+#todo-list:empty::before,
+#todo-list-done:empty::before {
+  display: block;
+  padding: 14px;
+  border: 1px dashed rgba(143, 167, 189, 0.24);
+  border-radius: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+#todo-list:empty::before {
+  content: "Keine offenen Aufgaben.";
+}
+
+#todo-list-done:empty::before {
+  content: "Noch nichts erledigt.";
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface-strong);
+  border: 1px solid var(--surface);
+  transition: all 0.2s;
+}
+
+.todo-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.priority-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 8px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.priority-1 .priority-badge { background: rgba(245, 101, 101, 0.1); color: var(--p1-color); }
+.priority-2 .priority-badge { background: rgba(237, 137, 54, 0.1); color: var(--p2-color); }
+.priority-3 .priority-badge { background: rgba(236, 201, 75, 0.1); color: var(--p3-color); }
+.priority-4 .priority-badge { background: rgba(72, 187, 120, 0.1); color: var(--p4-color); }
+.priority-5 .priority-badge { background: rgba(66, 153, 225, 0.1); color: var(--p5-color); }
+
+.todo-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.todo-item.is-complete {
+  opacity: 0.6;
+  background: var(--done-bg);
+}
+
+.todo-toggle {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.todo-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+}
+
+.todo-item.is-complete .todo-text {
+  color: #8ba0b2;
+  text-decoration: line-through;
+}
+
+.todo-delete {
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: rgba(181, 101, 93, 0.1);
+  color: var(--danger);
+  box-shadow: none;
+}
+
+.todo-delete:hover {
+  background: rgba(181, 101, 93, 0.16);
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  body {
+    padding-top: 34px;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  body {
+    grid-template-columns: 1fr;
+    padding: 18px 12px 22px;
+  }
+
+  body::before {
+    inset: 8px;
+    border-radius: 18px;
+  }
+
+  #todo-add {
+    width: 100%;
+  }
+
+  .todo-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .todo-delete {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

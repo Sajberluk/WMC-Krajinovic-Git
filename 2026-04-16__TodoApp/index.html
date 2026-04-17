@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Prioritäts-Planer | Deine Aufgaben im Griff</title>
+  <meta name="description" content="Ein eleganter Todo-Planer mit Priorisierung für maximale Produktivität.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="module" defer src="app.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Todo List</h1>
+
+  <div class="input-group">
+    <input id="todo-input" type="text" placeholder="Was steht an?">
+    <select id="todo-priority">
+      <option value="1">Dringend</option>
+      <option value="2">Hoch</option>
+      <option value="3" selected>Mittel</option>
+      <option value="4">Niedrig</option>
+      <option value="5">Trivial</option>
+    </select>
+    <button id="todo-add" type="button">Hinzufügen</button>
+  </div>
+
+  <h2>Pending Tasks</h2>
+  <ul id="todo-list">
+    <!-- dynamic content goes here -->
+  </ul>
+
+  <h2>Done</h2>
+  <ul id="todo-list-done">
+    <!-- dynamic content goes here -->
+  </ul>
+
+
+</body>
+
+</html>
