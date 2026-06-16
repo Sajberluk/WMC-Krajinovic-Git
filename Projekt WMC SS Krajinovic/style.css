@@ -1,0 +1,439 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f6f6f6;
+  color: #222;
+  line-height: 1.5;
+
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Navbar */
+header {
+  position: sticky;     
+  top: 0;
+  background: rgba(255, 255, 255, 0.6); 
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Pseudoselektor Hover */
+.nav-links a:hover {
+  background: #e9e9e9;
+}
+
+
+.nav-links a.active {
+  background: #222;
+  color: white;
+}
+
+
+h1, h2 {
+  margin-top: 0;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.card .content {
+  padding: 12px;
+}
+
+
+ul {
+  margin: 8px 0 0;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+
+.video {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+
+form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+
+ 
+  box-sizing: border-box;
+}
+
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #222;
+  border-color: #222;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background: #444;
+}
+
+
+footer {
+  margin-top: 30px;
+  padding: 18px;
+  text-align: center;
+}
+
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Watchlist & Search Styles */
+.watchlist-container {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.watchlist-input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.watchlist-input-group input {
+  margin-top: 0;
+  flex: 1;
+}
+
+.watchlist-input-group button {
+  margin-top: 0;
+}
+
+.watchlist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.watchlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.watchlist-item:last-child {
+  border-bottom: none;
+}
+
+.watchlist-item span {
+  font-size: 15px;
+}
+
+.watchlist-item button {
+  margin-top: 0;
+  padding: 4px 8px;
+  font-size: 12px;
+  background: #c0392b;
+}
+
+.watchlist-item button:hover {
+  background: #e74c3c;
+}
+
+/* Search Results Cards */
+.search-container {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search-input-group input {
+  margin-top: 0;
+  flex: 1;
+}
+
+.search-input-group button {
+  margin-top: 0;
+}
+
+.search-result-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search-result-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.search-result-card .content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 140px);
+  justify-content: space-between;
+}
+
+.search-result-card .content h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.search-result-card .content p {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.search-result-card .content .genres {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.search-result-card button {
+  margin-top: auto;
+  width: 100%;
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* Dynamic Recommendation on Home */
+.recommendation-container {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.recommendation-card {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .recommendation-card {
+    flex-direction: column;
+  }
+}
+
+.recommendation-card img {
+  width: 200px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .recommendation-card img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.recommendation-card .content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recommendation-card .content h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.recommendation-card .content p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.recommendation-card .content .meta-info {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Feedback List on Contact */
+.feedback-list {
+  margin-top: 20px;
+}
+
+.feedback-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.feedback-card .info {
+  flex: 1;
+}
+
+.feedback-card .info h4 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
+
+.feedback-card .info p {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.feedback-card .info .category {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #777;
+  font-weight: bold;
+}
+
+.feedback-card button {
+  margin-top: 0;
+  background: #c0392b;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.feedback-card button:hover {
+  background: #e74c3c;
+}
