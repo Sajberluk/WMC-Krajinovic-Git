@@ -1,0 +1,88 @@
+{
+    "id": 7,
+    "name": "Spengi Cup",
+    "game": "Arena Clash",
+    "startsAt": "2026-11-14T09:00:00",
+    "venue": {
+        "school": "HTL Spengergasse",
+        "room": "C3.07"
+    },
+    "teams": [
+        {
+            "tag": "5AAIF",
+            "name": "Null Pointer Ninjas",
+            "players": [
+                {
+                    "gamertag": "byteMe",
+                    "realName": "Lena",
+                    "role": "tank",
+                    "stats": { "kills": 12, "deaths": 4, "assists": 9 },
+                    "clan": { "tag": "NPN", "joinedAt": "2025-09-02" }
+                },
+                {
+                    "gamertag": "segfault",
+                    "role": "damage",
+                    "stats": { "kills": 21, "deaths": 0, "assists": 3 }
+                },
+                {
+                    "gamertag": "404brain",
+                    "realName": "Jonas",
+                    "role": "support",
+                    "stats": { "kills": 2, "deaths": 7, "assists": 25 }
+                }
+            ]
+        },
+        {
+            "tag": "5BAIF",
+            "name": "Ctrl Alt Defeat",
+            "players": [
+                {
+                    "gamertag": "sudo_sara",
+                    "realName": "Sara",
+                    "role": "damage",
+                    "stats": { "kills": 17, "deaths": 9, "assists": 4 },
+                    "clan": { "tag": "CAD", "joinedAt": "2024-11-20" }
+                },
+                {
+                    "gamertag": "lagMaster",
+                    "role": "tank",
+                    "stats": { "kills": 6, "deaths": 11, "assists": 8 }
+                },
+                {
+                    "gamertag": "pingu",
+                    "realName": "Emre",
+                    "role": "support",
+                    "stats": { "kills": 3, "deaths": 5, "assists": 19 },
+                    "clan": { "tag": "CAD", "joinedAt": "2025-01-15" }
+                }
+            ]
+        }
+    ],
+    "matches": [
+        {
+            "id": 1,
+            "round": 1,
+            "teamA": "5AAIF",
+            "teamB": "5BAIF",
+            "status": "finished",
+            "score": { "teamA": 13, "teamB": 9 },
+            "mvp": "segfault"
+        },
+        {
+            "id": 2,
+            "round": 2,
+            "teamA": "5BAIF",
+            "teamB": "5AAIF",
+            "status": "live",
+            "score": { "teamA": 4, "teamB": 4 }
+        },
+        {
+            "id": 3,
+            "round": 3,
+            "teamA": "5AAIF",
+            "teamB": "5BAIF",
+            "status": "scheduled",
+            "score": null
+        }
+    ]
+}

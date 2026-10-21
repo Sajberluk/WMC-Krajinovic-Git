@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        /* Language and Environment */
+        "target": "ESNext",
+        /* Modules */
+        "module": "NodeNext",
+        "types": [
+            "node"
+        ],
+        /* Interop Constraints */
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        /* Type Checking */
+        "strict": true,
+        /* Completeness */
+        "skipLibCheck": true,
+        /* Debugger */
+        "sourceMap": true
+    }
+}
